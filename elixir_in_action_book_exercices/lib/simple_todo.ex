@@ -43,3 +43,9 @@ defmodule TodoList do
     end
   end
 end
+
+defimpl String.Chars, for: TodoList do
+  def to_string(_) do
+    "#TodoList"
+  end
+end

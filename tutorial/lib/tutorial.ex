@@ -22,7 +22,7 @@ defmodule Tutorial do
 
   ## Examples
 
-      iex> Animals.selection(2)
+      iex> Tutorial.selection(2)
       ["gorilla", "giraffe"]
 
   """
@@ -42,5 +42,17 @@ defmodule Tutorial do
       {:ok, binary} -> :erlang.binary_to_term(binary)
       {:error, _reason} -> "File does not exist"
     end
+  end
+
+  def dict_tests() do
+    animal = %{
+      name: "Rex",
+      type: "dog",
+      legs: 4
+    }
+
+    IO.puts animal.name
+    updatedAnimal = Map.put(animal, :name, "Max")
+    %{animal | name: "Max"}
   end
 end

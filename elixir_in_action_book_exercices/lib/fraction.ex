@@ -1,7 +1,7 @@
 defmodule Fraction do
   defstruct a: nil, b: nil
 
-  @spec new(number, number) :: Fraction.t()
+  @spec new(number, number) :: Fraction
   def new(a, b) do
     %Fraction{a: a, b: b}
   end
